@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://cago34yp6b2de"]
+
+[ext_resource type="Script" uid="uid://xdofyp87sqac" path="res://src/genre_screen.gd" id="1_0ex7h"]
+[ext_resource type="PackedScene" uid="uid://de4xfx5x8tjo3" path="res://game_card.tscn" id="1_pu7dv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ex7h"]
+font_size = 25
+
+[node name="LivePerf" type="Control" unique_id=1570917986 node_paths=PackedStringArray("start_card")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ex7h")
+start_card = NodePath("HBoxContainer/CannizzoCard")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=267128203]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.53, 0.2968, 0.52222663, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1117656502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1320624465]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "LIVE PERFORMANCES"
+label_settings = SubResource("LabelSettings_0ex7h")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1672151832]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -87.5
+offset_right = 232.0
+offset_bottom = 87.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 250
+
+[node name="CannizzoCard" parent="HBoxContainer" unique_id=1078940829 instance=ExtResource("1_pu7dv")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../FrenchHornCard")
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_right = NodePath("../FrenchHornCard")
+game_name = "Cannizzo Brothers"
+
+[node name="FrenchHornCard" parent="HBoxContainer" unique_id=987252293 instance=ExtResource("1_pu7dv")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../CannizzoCard")
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_right = NodePath("../CannizzoCard")
+game_name = "Horn Duet"

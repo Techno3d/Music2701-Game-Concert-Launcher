@@ -28,7 +28,7 @@ func _ready() -> void:
 
 func show_arrows():
 	# Right side
-	if(current_idx == length - 1):
+	if(current_idx == length):
 		right_arrow.hide()
 	else:
 		right_arrow.show()
@@ -42,13 +42,13 @@ func move_right():
 	current_idx += 1
 	show_arrows()
 	for i in range(length):
-		selector_list[i].position.x = screen_width*((i+1-current_idx)/length)
+		selector_list[i].position.x = screen_width*(i+1-current_idx)
 
 func move_left():
 	current_idx -= 1
 	show_arrows()
 	for i in range(length):
-		selector_list[i].position.x = screen_width*((i+1-current_idx)/length)
+		selector_list[i].position.x = screen_width*(i+1-current_idx)
 
 func move_down():
 	if selector_list[current_idx].has_method("pass_down"):
@@ -64,14 +64,14 @@ func _input(event: InputEvent) -> void:
 				grab_focus()
 	if is_focused:
 		if event is InputEventKey and event.is_released():
-			if (event as InputEventKey).keycode == KEY_RIGHT and current_idx < (length - 1):
+			if (event as InputEventKey).keycode == KEY_RIGHT and current_idx < length:
 				move_right()
 			elif (event as InputEventKey).keycode == KEY_LEFT and current_idx > 0:
 				move_left()
 			elif (event as InputEventKey).keycode == KEY_DOWN:
 				move_down()
 		if event is InputEventJoypadButton and event.is_released():
-			if (event as InputEventJoypadButton).button_index == JOY_BUTTON_DPAD_RIGHT and current_idx < (length - 1):
+			if (event as InputEventJoypadButton).button_index == JOY_BUTTON_DPAD_RIGHT and current_idx < length:
 				move_right()
 			elif (event as InputEventJoypadButton).button_index == JOY_BUTTON_DPAD_LEFT and current_idx > 0:
 				move_left()
