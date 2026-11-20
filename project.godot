@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Music 2701"
-run/main_scene="uid://belm4ei1h38k6"
+run/main_scene="uid://ddpmx6253xycs"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ObsWebsocket="*uid://dcoxh5p21j4hi"
 
 [display]
 
