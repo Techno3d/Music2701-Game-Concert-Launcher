@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+
+<svg
+   fill="#000000"
+   height="400"
+   width="400"
+   version="1.1"
+   id="Icons"
+   viewBox="0 0 16 16"
+   xml:space="preserve"
+   sodipodi:docname="rounded-square-arrow-indicator-right-svgrepo-com.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs1"><linearGradient
+     id="swatch2"
+     inkscape:swatch="solid"><stop
+       style="stop-color:#000000;stop-opacity:1;"
+       offset="0"
+       id="stop2" /></linearGradient></defs><sodipodi:namedview
+   id="namedview1"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="1.13875"
+   inkscape:cx="80.351262"
+   inkscape:cy="268.27662"
+   inkscape:window-width="1920"
+   inkscape:window-height="1171"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Icons"
+   showguides="true"><inkscape:page
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     id="page2"
+     margin="0"
+     bleed="0" /><sodipodi:guide
+     position="-2.7925357,8.0087816"
+     orientation="0,-1"
+     id="guide1"
+     inkscape:locked="false" /><sodipodi:guide
+     position="7.9912184,7.8858398"
+     orientation="1,0"
+     id="guide2"
+     inkscape:locked="false" /></sodipodi:namedview>
+
+
+
+
+
+
+
+<path
+   id="rect1"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.48;stroke-dasharray:none;stroke-opacity:1"
+   d="m 5.5296274,3.374587 c -0.2516413,0 -0.5032826,0.077561 -0.7045957,0.2326832 -0.402626,0.3102443 -0.402626,0.7756106 0,1.0858548 L 9.1532621,8.0282505 4.8250317,11.363376 c -0.402626,0.310244 -0.402626,0.77561 0,1.085854 0.2013131,0.155122 0.4026261,0.232684 0.7045957,0.232684 0.3019695,0 0.5032826,-0.07756 0.7045956,-0.232684 l 5.032826,-3.8780521 c 0.402626,-0.3102442 0.402626,-0.7756105 0,-1.0858548 L 6.234223,3.6072702 C 6.03291,3.4521481 5.7812687,3.374587 5.5296274,3.374587 Z" /></svg>

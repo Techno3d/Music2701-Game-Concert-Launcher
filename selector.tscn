@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://cv7jto0fnvo6o"]
+
+[ext_resource type="Script" uid="uid://mbah27x1a0jo" path="res://selector.gd" id="1_2m6kw"]
+[ext_resource type="PackedScene" uid="uid://bf5bh5v8etdol" path="res://rythym_games.tscn" id="2_f82ba"]
+[ext_resource type="Script" uid="uid://djpr04rc42dpa" path="res://src/move_selector.gd" id="3_pl5vu"]
+[ext_resource type="Texture2D" uid="uid://nw4anjsr5l3g" path="res://resources/rounded-square-arrow-indicator-right-svgrepo-com.svg" id="4_sqkg4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7svuk"]
+draw_center = false
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(1, 1, 1, 1)
+
+[node name="selector" type="Control" unique_id=790070768]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2m6kw")
+selector_categories = Array[PackedScene]([ExtResource("2_f82ba")])
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1156179192]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36402223, 0.65093255, 0.9362907, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1956616292]
+
+[node name="MoveSelector" type="Panel" parent="CanvasLayer" unique_id=157872628]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_7svuk")
+script = ExtResource("3_pl5vu")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MoveSelector" unique_id=1360758665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="RightArrow" type="TextureRect" parent="CanvasLayer/MoveSelector/MarginContainer" unique_id=514843584]
+modulate = Color(1, 1, 1, 0.5803922)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("4_sqkg4")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="LeftArrow" type="TextureRect" parent="CanvasLayer/MoveSelector/MarginContainer" unique_id=325112585]
+visible = false
+modulate = Color(1, 1, 1, 0.5803922)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_sqkg4")
+expand_mode = 1
+stretch_mode = 4
+flip_h = true

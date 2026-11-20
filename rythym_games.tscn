@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://bf5bh5v8etdol"]
+
+[ext_resource type="Script" uid="uid://xdofyp87sqac" path="res://src/genre_screen.gd" id="1_8g7tt"]
+[ext_resource type="PackedScene" uid="uid://de4xfx5x8tjo3" path="res://game_card.tscn" id="1_afa4q"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7svuk"]
+font_size = 25
+
+[node name="RythymGames" type="Control" unique_id=1227794320 node_paths=PackedStringArray("start_card")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath("HBoxContainer/GDGBACard")
+focus_neighbor_top = NodePath("HBoxContainer/GDGBACard")
+focus_neighbor_right = NodePath("HBoxContainer/GDGBACard")
+focus_neighbor_bottom = NodePath("HBoxContainer/GDGBACard")
+focus_mode = 2
+mouse_filter = 1
+script = ExtResource("1_8g7tt")
+start_card = NodePath("HBoxContainer/IshaanCard")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1486629820]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.61, 0.160125, 0.1525, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1987866532]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=391614815]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "RHYTHM GAMES"
+label_settings = SubResource("LabelSettings_7svuk")
+
+[node name="HBoxContainer" type="GridContainer" parent="." unique_id=1323052981]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -192.0
+offset_right = 330.0
+offset_bottom = 258.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 250
+theme_override_constants/v_separation = 150
+columns = 2
+
+[node name="IshaanCard" parent="HBoxContainer" unique_id=488997937 instance=ExtResource("1_afa4q")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_right = NodePath("../GDGBACard")
+focus_neighbor_bottom = NodePath("../GuitarCtrlCard")
+game_name = "Ishaan"
+
+[node name="GDGBACard" parent="HBoxContainer" unique_id=114839480 instance=ExtResource("1_afa4q")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../IshaanCard")
+focus_neighbor_top = NodePath("../..")
+focus_neighbor_bottom = NodePath("../SekaiCard")
+game_name = "Geometry Dash"
+
+[node name="GuitarCtrlCard" parent="HBoxContainer" unique_id=1730848848 instance=ExtResource("1_afa4q")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../IshaanCard")
+focus_neighbor_right = NodePath("../SekaiCard")
+game_name = "Guitar Game"
+
+[node name="SekaiCard" parent="HBoxContainer" unique_id=1078940829 instance=ExtResource("1_afa4q")]
+layout_mode = 2
+focus_neighbor_left = NodePath("../GuitarCtrlCard")
+focus_neighbor_top = NodePath("../GDGBACard")
+game_name = "Project Sekai"

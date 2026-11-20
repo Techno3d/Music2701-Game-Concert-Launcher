@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://h1g8sq6rqbx2"]
+
+[ext_resource type="Script" uid="uid://dg0is3ulsyvv3" path="res://src/main_menu.gd" id="1_06t4h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7svuk"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_5qtyt"]
+font_size = 30
+
+[node name="MainMenu" type="Control" unique_id=1184917052]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=244611594]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.3870442, 0.3518048, 0.5625336, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2074329196]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1142957160]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1555255389]
+layout_mode = 2
+text = "The 2701 Game Collection"
+label_settings = SubResource("LabelSettings_7svuk")
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer" unique_id=215662512]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1343815072]
+layout_mode = 2
+text = "Press Start"
+label_settings = SubResource("LabelSettings_5qtyt")
+horizontal_alignment = 1
